@@ -1,0 +1,172 @@
+.contact-content {
+    // width: 1000px;
+    // margin: 0 auto;
+    background-color: #eee;
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: bold;
+        border-bottom: 2px solid #F6C101;
+        color: var(--dark);
+        margin: 30px auto;
+        width: 250px;
+    }
+
+    #errorMessage {
+        color: var(--error-color);
+        padding: 20px;
+    }
+    .contact-form {
+
+        width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        box-shadow: 0 15px 20px #777;
+        // box-shadow: 5px 5px 15px #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        input, textarea {
+            width: 70%;
+            margin: 10px 5px;
+            padding: 7px;
+            border: none;
+            border-bottom: 1px solid #F6C101;
+            outline: none;
+        }
+        button {
+            border: none;
+            border-radius: 5px;
+            min-width: 150px;
+            padding: 10px 30px;
+            cursor: pointer;
+            background-color: var(--dark);
+            color: #F6C101;
+            outline: none;
+            font-size: 15px;
+            transition: transform .1s ease-in-out;
+        &:active {
+            transform: scale(.95);
+
+        }
+        }
+        transition: transform .3s ease-in-out;
+        &:hover {
+            transform: scale(.98);
+
+        }
+    }
+}
+@media all and (max-width: 600px) {
+    :root {
+        font-size: 50%;
+    }
+    .container {
+        width: 100%;
+    }
+    .main-header {
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        .header-menu {
+            
+            .header-nav {
+                display: none;
+            }
+        }
+    }
+    .menu-bg {
+        z-index: 5;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle, #f9ca24,#e9c955 );
+        transition: .3s ease;
+    }
+    
+    .menu-bg, #menu-bar {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #menu-bar {
+        z-index: 10;
+    }
+    .change-menu-bg{
+        width: 500px;
+        height: 500px;
+        transform: translate(200px, -200px);
+    }
+    #menu-bar {
+        #menu {
+            width: 35px;
+            height: 30px;
+            margin: 30px 50px 20px 20px ;
+            cursor: pointer;
+                .bar {
+                    height: 5px;
+                    width: 100%;
+                    background-color: #f9ca24;
+                    display: block;        
+                    border-radius: 5px;
+                    transition: .3s ease-in-out;
+                }                       
+                
+        }   
+        #bar1 {
+            transform: translateY(-4px);
+        }
+        #bar3 {
+            transform: translateY(4px);
+        }
+        .changeMenu #bar1{
+            background-color: #fff;
+        }
+        .changeMenu #bar2{
+            background-color: #fff;
+        }
+        .changeMenu #bar3{
+            background-color: #fff;
+        }
+        .changeMenu #bar1 {
+            transform: translateY(4px) rotateZ(-45deg);
+        }
+        .changeMenu #bar2 {
+            opacity: 0;
+        }
+        .changeMenu #bar3 {
+            transform: translateY(-6px) rotate(45deg);
+        }
+        .nav {
+            padding: 0;
+            margin: 0 20px;
+            transition: 0.3s ease;
+            text-align: center;
+            display: none;
+        }
+        .changeMenu {
+            display: block;
+        }
+        .nav li a {    
+            font-size: 20px;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+        .nav li {
+            padding: 10px 0;
+        }
+        
+    }
+    .contact-content {
+        width: 100%;
+        margin: 0 auto;
+        form {
+            max-width: 340px;
+            margin: 0 auto;
+        }
+    }
+}
+
